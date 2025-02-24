@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <script>
+        function allnumeric(age){
+            var numbers = /^[0-9]+$/;
+            
+            if(age.value == "") {
+                alert("Fill the age");
+                age.focus();
+                return false;
+            } else {
+                if(age.value.match(numbers)) {
+                    return true;
+                } else {
+                    alert("Age must have numbers only");
+                    age.value="";
+                    age.focus();
+                    return false;
+                }
+            }
+        }
+    </script> -->
+</head>
+<body style="text-align: center;" >
+    <script src="script.js"></script>
+
+    <form name="loginForm" method="post" action="home.html" 
+    onsubmit="return validateForm();">
+
+    <h1>Login</h1>
+
+    <p>Username: 
+        <input type="text" name="loginName"></p>
+
+        <p>Password: <input type="password" name="password"></p>
+
+        <p><input type="submit" name="send" value="Send Details">
+            <input type="reset" name="Clear" id="Clear" value="Clear form"></p>
+
+            
+
+           
+</form>
+
+<!-- <form name="registration" method="post" onsubmit="return allnumeric(age) ;">
+    <label for="age">Enter Your age: </label>
+    <input type="text" name="age" />
+    <input type="submit" name="submit" value="Submit" />
+</form> -->
+</body>
+</html>

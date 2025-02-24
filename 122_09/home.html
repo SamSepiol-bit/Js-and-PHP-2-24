@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Numbers numeric -->
+    <script>
+        function allnumeric(age){
+            var numbers = /^[0-9]+$/;
+            
+            if(age.value == "") {
+                alert("Fill the age");
+                age.focus();
+                return false;
+            } else {
+                if(age.value.match(numbers)) {
+                    return true;
+                } else {
+                    alert("Age must have numbers only");
+                    age.value="";
+                    age.focus();
+                    return false;
+                }
+            }
+        }
+        <!-- letters numeric -->
+
+        function allnumeric(age){
+            var letters = /^[A-Z a-z]+$/;     // letternumeric        
+            if(age.value == "") {
+                alert("Fill the name");
+                age.focus();
+                return false;
+            } else {
+                if(age.value.match(letters)) {
+                    return true;
+                } else {
+                    alert("Name must have characters only");
+                    age.value="";
+                    age.focus();
+                    return false;
+                }
+            }
+        }
+
+        function formValidation() {
+            var uadd = document.registration.address;
+            var uemail = document.registration.email;
+
+        }
+    </script>
+    
+</head>
+<body>
+    <h1>Home Page</h1>
+    <form name="registration" method="post" onsubmit="return allnumeric(age) ;">
+        <li><label for="age">Enter Your age: </label></li>
+        <li><input type="text" name="age" /></li>
+        <li><input type="submit" name="submit" value="Submit" /></li>
+    </form>
+
+    <form name="registration" method="post" onsubmit="return allnumeric(name) ;">
+        <li><label for="age">Enter Your Name: </label></li>
+        <li><input type="text" name="name" /></li>
+        <li><input type="submit" name="submit" value="Submit" /></li>
+    </form>
+</body>
+</html>
